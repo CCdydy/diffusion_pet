@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+runs/
+asset_prior/data/
+asset_prior/assets/
+*.pt
+*.npz
