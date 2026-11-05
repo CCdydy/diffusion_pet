@@ -12,6 +12,22 @@ Three photos of one animal go in. About four million colored hair strands on a c
 2. **Hunyuan3D-2mv** (multi-view 3D diffusion) turns the fur-less video into a closed mesh.
 3. **v18**, our geometry-conditioned fur prior, predicts strand shapes and lengths.
 
+## Demo
+
+[![Shiba Inu and Beagle: H3 frame next to our reconstructed strands, same camera](docs/media/report_poster.jpg)](docs/media/report_en.mp4)
+
+- **Video** ([`docs/media/report_en.mp4`](docs/media/report_en.mp4), English, 92 s): the whole pipeline on a Shiba Inu, then the same program on a Beagle.
+- **Slides**: [PowerPoint](docs/media/diffusion_pet_report.pptx) or [PDF](docs/media/diffusion_pet_report.pdf), 15 slides covering the goal, the five stages, results, size of the model, time and limits.
+- **Measured on the beagle** (RTX 4090 + RTX 6000 Ada): about 70 minutes from photos to 4,000,041 strands.
+  - white mesh 3.2 min;
+  - furry videos 30 min;
+  - case 20 min;
+  - fur 17 min.
+
+The Shiba Inu example uses our own photos. The Beagle photos are public ARTEMIS renders. All generated videos come from MiniMax H3, and commercial use of its output needs a MiniMax licence.
+
+## How it works
+
 A new animal needs only a new species config (ears, tail, height, coat description, coat table, coat colors). The stages, files and requirements are described in [`pipeline/README.md`](pipeline/README.md). The rest of this page describes v18.
 
 ## v18: the fur prior
