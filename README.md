@@ -1,6 +1,20 @@
 # diffusion_pet
 
-**v18: a geometry-conditioned diffusion prior for animal fur strands.**
+**A general, diffusion-based pipeline from three photos to a strand-level 3D groom, and the fur prior behind it.**
+
+```bash
+bash pipeline/run_animal.sh <photos> pipeline/species/beagle.json <out>
+```
+
+Three photos of one animal go in. About four million colored hair strands on a closed body mesh come out, ready to render and edit. Three diffusion models do the heavy lifting:
+
+1. **MiniMax H3** (video diffusion) removes the fur in video to give a white body, and later generates furry videos with known cameras.
+2. **Hunyuan3D-2mv** (multi-view 3D diffusion) turns the fur-less video into a closed mesh.
+3. **v18**, our geometry-conditioned fur prior, predicts strand shapes and lengths.
+
+A new animal needs only a new species config (ears, tail, height, coat description, coat table, coat colors). The stages, files and requirements are described in [`pipeline/README.md`](pipeline/README.md). The rest of this page describes v18.
+
+## v18: the fur prior
 
 This repository holds the v18 fur prior of the [PatchLocks](https://github.com/CCdydy/PatchLocks) project. The body is split into small surface patches. For each patch, v18 samples the strand shapes that grow there: how the fur rises, droops and clumps along a given flow direction. Each sample is conditioned on two things:
 
@@ -53,6 +67,7 @@ The repository is an overlay on a PatchLocks checkout. Paths are relative to the
 
 | Path | Contents |
 |---|---|
+| `pipeline/` | The full photos-to-groom program (`run_animal.sh`), its stages and the species configs; see `pipeline/README.md` |
 | `diag/v17/v18_common.py` | UNet18 (v17 UNet + geometry input), `geo_from_pack` |
 | `diag/v17/v17_common.py` | Shared v17 model code (fuser, heads, strand codec glue) |
 | `diag/v17/build_cache_v18.py` | Feature caches: DINO tokens projected by the init fuser, plus geometry maps |

@@ -1,0 +1,182 @@
+{
+ "name": "beagle",
+ "species": "adult tricolor Beagle dog",
+ "height_m": 0.48,
+ "ears": "floppy",
+ "tail": "straight",
+ "white_mesh": {
+  "traits": "rounded skull, long soft drooping ears, medium muzzle length, deep chest, torso length, leg lengths, paw placement and upright tail",
+  "tail": "the tail held upright with a gentle curve"
+ },
+ "subject": "subject_definitions: <Subject 1> is the dog shown in the reference images, an adult tricolor Beagle: a short, dense, smooth and glossy coat; a black saddle over the back and upper flanks; rich tan on the head, ears, shoulders and thighs; white on the muzzle blaze, chest, belly, legs, paws and most of the tail; long soft drooping ears; a tapering tail held out behind. No collar.",
+ "color_boundary": "boundaries between the black, tan and white patches",
+ "region": {
+  "muzzle": [
+   "the muzzle and nose",
+   "short, dense, smooth white fur on the muzzle and a white blaze up the forehead, a finely textured black nose, whiskers"
+  ],
+  "cheek": [
+   "the {side} cheek below the eye",
+   "short, sleek tan fur on the cheek that turns white toward the lips, a natural dark brown eye with soft eyelids, whiskers"
+  ],
+  "ear": [
+   "the outer side of the {side} ear",
+   "a long, soft, drooping ear covered in very short, velvety tan fur, with a smooth rounded lower edge"
+  ],
+  "chest": [
+   "the front of the chest",
+   "short, dense, smooth white fur on the chest and throat, lying flat and pointing downward"
+  ],
+  "front_paw": [
+   "the {side} front paw",
+   "short, smooth, dense white fur on the lower leg; a compact round paw with short fur between the toes, dark nails and dark toe pads touching the floor"
+  ],
+  "front_paw2": [
+   "the whole {side} front paw, seen from slightly above",
+   "short, smooth, dense white fur on the lower leg; a compact round paw with short fur between the toes and dark nails, the whole paw standing on the floor"
+  ],
+  "front_leg": [
+   "the outer side of the {side} front leg",
+   "short, sleek white fur lying flat along the leg, turning tan at the top of the shoulder"
+  ],
+  "flank": [
+   "the {side} flank",
+   "a short, dense, glossy coat lying flat backward along the body: a black saddle on the upper flank, tan below and behind it, white toward the belly"
+  ],
+  "thigh": [
+   "the {side} thigh",
+   "short, dense, smooth fur on the thigh, tan on the outside and white on the back and inner side of the leg, lying flat downward"
+  ],
+  "hind_paw": [
+   "the {side} hind paw",
+   "short, smooth white fur on the hock and lower hind leg; a compact round paw with short fur between the toes and dark nails"
+  ],
+  "hind_paw2": [
+   "the whole {side} hind paw, seen from slightly above",
+   "short, smooth white fur on the hock and lower hind leg; a compact round paw with short fur between the toes and dark nails, the whole paw standing on the floor"
+  ],
+  "tail": [
+   "the tail",
+   "a tapering tail with short, dense fur, white for most of its length with some black and tan near the base, slightly brushier underneath"
+  ],
+  "back": [
+   "the middle of the back",
+   "a short, dense, glossy black saddle coat lying smoothly backward along the spine"
+  ]
+ },
+ "refs": {
+  "L": [
+   "front_left_45",
+   "left"
+  ],
+  "R": [
+   "back_right_45"
+  ],
+  "B": [
+   "left",
+   "back_right_45"
+  ]
+ },
+ "coat": {
+  "body": {
+   "gf": 0.65,
+   "lg": 1.0,
+   "lu": 0.55,
+   "g0": 30,
+   "g1": 4,
+   "u0": 50,
+   "u1": 25,
+   "yg": 5,
+   "yu": 20,
+   "dens": 1.2,
+   "clump": 0.15
+  },
+  "tail": {
+   "gf": 0.6,
+   "lg": 1.0,
+   "lu": 0.6,
+   "g0": 35,
+   "g1": 6,
+   "u0": 55,
+   "u1": 30,
+   "yg": 6,
+   "yu": 25,
+   "dens": 1.2,
+   "clump": 0.2
+  },
+  "legs": {
+   "gf": 0.7,
+   "lg": 1.0,
+   "lu": 0.55,
+   "g0": 22,
+   "g1": 3,
+   "u0": 40,
+   "u1": 20,
+   "yg": 5,
+   "yu": 20,
+   "dens": 1.3,
+   "clump": 0.1
+  },
+  "paws": {
+   "gf": 0.7,
+   "lg": 1.0,
+   "lu": 0.6,
+   "g0": 20,
+   "g1": 4,
+   "u0": 35,
+   "u1": 18,
+   "yg": 6,
+   "yu": 22,
+   "dens": 1.5,
+   "clump": 0.1
+  },
+  "face": {
+   "gf": 0.75,
+   "lg": 1.0,
+   "lu": 0.6,
+   "g0": 20,
+   "g1": 3,
+   "u0": 40,
+   "u1": 20,
+   "yg": 5,
+   "yu": 20,
+   "dens": 1.6,
+   "clump": 0.05
+  },
+  "ears": {
+   "gf": 0.8,
+   "lg": 0.8,
+   "lu": 0.5,
+   "g0": 10,
+   "g1": 2,
+   "u0": 25,
+   "u1": 10,
+   "yg": 4,
+   "yu": 15,
+   "dens": 1.8,
+   "clump": 0.05
+  }
+ },
+ "palette": {
+  "black": [
+   0.05,
+   0.045,
+   0.04
+  ],
+  "tan": [
+   0.52,
+   0.3,
+   0.13
+  ],
+  "white": [
+   0.84,
+   0.82,
+   0.78
+  ]
+ },
+ "under": [
+  0.8,
+  0.76,
+  0.7
+ ]
+}

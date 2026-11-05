@@ -1,0 +1,54 @@
+{
+  "preset_id": "white_mesh_v1",
+  "created_date": "2026-10-24",
+  "approved_by_user": true,
+  "purpose": "固定的照片到去毛参考视频、Hunyuan 多视角白模与闭合表面处理流程",
+  "white_video": {
+    "model": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    "text_encoder": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+    "seed": 2026102401,
+    "steps": 20,
+    "turbo": false,
+    "width": 864,
+    "height": 480,
+    "fps": 24,
+    "frames": 124,
+    "reference_order": [
+      "front_left_45.jpg",
+      "left.jpg",
+      "back_right_45.jpg"
+    ],
+    "prompt": "prompts/white_body.txt",
+    "api": "workflows/h3_white_body_api.json"
+  },
+  "mesh": {
+    "model": "hunyuan3d-dit-v2-mv_fp16.safetensors",
+    "seed": 2026102401,
+    "steps": 20,
+    "cfg": 7.5,
+    "resolution": 256,
+    "extracted_frames": [
+      0,
+      18,
+      36,
+      54,
+      72,
+      90,
+      108,
+      123
+    ],
+    "conditioned_frames": [
+      0,
+      123
+    ],
+    "api": "workflows/hunyuan_multiview_api.json",
+    "cleanup": "stages/clean_h3_mesh.py",
+    "approved_asset": ""
+  },
+  "runtime": {
+    "comfy_python": "python",
+    "geometry_python": "python",
+    "endpoint": "http://127.0.0.1:8188",
+    "comfyui_commit": "1a82e6d01f395b43275c77acd289af1eb7090bb9"
+  }
+}
