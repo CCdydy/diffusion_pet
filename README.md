@@ -98,10 +98,14 @@ The repository is an overlay on a PatchLocks checkout. Paths are relative to the
    - `SMAL_DIR`: a directory with `code/` (containing `smal_pytorch/` and `configs/SMAL_configs.py`) and the model data that the code reads (`data/smal_data/...`).
    - `SMAL_PARTS`: a JSON file of vertex-index lists on the 3,889-vertex SMAL template. Keys: `eyes`, `nosetip`, `inner_earcanal`, `ears`, `face`, `neck`, `mane`, `belly`, `leg_front`, `leg_rear`, `front_paws`, `paws`, `paw_pads`, `tail`, `under_tail`.
 
-4. **Weights.** They are not in this repository and will be published on Hugging Face:
+4. **Weights.** They are on Hugging Face: <https://huggingface.co/zengzzy/diffusion_pet>.
 
-   - **v18** (`fuser.pt` + `v18_best.pt`, about 115 MB): needed for inference.
-   - **v17 r4b**: the initialisation for training.
+   - **`v18/`** (`fuser.pt` + `v18_best.pt`, about 115 MB): needed for inference.
+   - **`v17_r4b/`**: the initialisation for training.
+
+   ```bash
+   hf download zengzzy/diffusion_pet --local-dir weights   # then MODEL=weights/v18, R4B=weights/v17_r4b
+   ```
 
 ## Usage
 
